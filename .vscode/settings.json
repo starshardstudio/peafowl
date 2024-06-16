@@ -1,0 +1,16 @@
+{
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
+		"**/.gitignore": true,
+		"_*": true,
+		"LICENSE-CODE.txt": true,
+		"deno.json": true,
+		"deno.lock": true,
+		".vscode": true,
+	}
+}
