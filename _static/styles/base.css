@@ -293,6 +293,11 @@ td.review-rating, td.game-progress {
     font-weight: 700;
 }
 
+td.game-progress {
+    background-clip: text !important;
+    color: transparent !important;
+}
+
 td.rating-unset {
     background-color: var(--color-unset);
     color: var(--color-unset-over);
