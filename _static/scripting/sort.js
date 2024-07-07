@@ -137,7 +137,7 @@ function readProgress(a) {
             /**
              * @type {HTMLDataElement}
              */
-            const data = cell.firstElementChild
+            const data = cell.firstElementChild.firstElementChild
             switch (data.value) {
                 case undefined:
                     return undefined;

@@ -12,6 +12,7 @@
     --color-body-over: #FFFFFF;
 
     --color-link: #99ffff;
+    --color-link-over: #000000;
 
     --color-unset: #474747;
     --color-unset-over: #FFFFFF;
@@ -63,11 +64,16 @@
         --color-body-over: #1E1E1E;
 
         --color-link: #006666;
+        --color-link-over: #FFFFFF;
     }
 }
 
 * {
     box-sizing: border-box;
+}
+
+*[title] {
+    cursor: help;
 }
 
 body {
@@ -132,20 +138,19 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 12px;
 }
 
-a {
+a, .sortable, .sortable * {
     color: var(--color-link);
-
     text-decoration: 1px solid var(--color-link) underline;
+    --color-current: var(--color-link);
+    --color-current-over: var(--color-link-over);
+
+    cursor: pointer;
 }
 
 /* Kind of an hack but ok */
 a[href] i[class^="fa-"]::before {
     text-decoration: 1px solid currentColor underline;
     vertical-align: text-top;
-}
-
-*[title] {
-    cursor: help;
 }
 
 abbr[title] i[class^="fa-"]::before {
@@ -278,7 +283,11 @@ td, th {
 }
 
 thead th {
-    border-bottom: 2px solid var(--color-current);
+    background-color: color-mix(in srgb, var(--color-current) 5%, transparent);
+}
+
+thead th.sortable:hover {
+    background-color: color-mix(in srgb, var(--color-current) 10%, transparent);
 }
 
 tbody th {
@@ -286,11 +295,40 @@ tbody th {
     font-weight: 700;
 }
 
-td.review-rating, td.game-progress {
+td.review-rating {
     border-bottom: 0;
 
     font-family: var(--font-title), serif;
     font-weight: 700;
+
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+    min-height: 38px;
+
+    text-align: center;
+}
+
+td.game-progress {
+    font-family: var(--font-title), serif;
+    font-weight: 700;
+
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+    min-height: 38px;
+
+    text-align: center;
+}
+
+td.game-progress div {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 td.rating-unset {
@@ -318,54 +356,46 @@ td.rating-perfect {
     color: var(--color-perfect-over);
 }
 
-td.progress-unset, .reviewinfo-metadata-content.game-progress.progress-unset .reviewinfo-metadata-icon {
+td.progress-unset div, .reviewinfo-metadata-content.game-progress.progress-unset .reviewinfo-metadata-icon {
     background-image: var(--image-unset);
     background-color: var(--color-unset);
     color: var(--color-unset-over);
 }
 
-td.progress-new, .reviewinfo-metadata-content.game-progress.progress-new .reviewinfo-metadata-icon {
+td.progress-new div, .reviewinfo-metadata-content.game-progress.progress-new .reviewinfo-metadata-icon {
     background-image: var(--image-new);
     background-color: var(--color-new);
     color: var(--color-new-over);
 }
 
-td.progress-started, .reviewinfo-metadata-content.game-progress.progress-started .reviewinfo-metadata-icon {
+td.progress-started div, .reviewinfo-metadata-content.game-progress.progress-started .reviewinfo-metadata-icon {
     background-image: var(--gradient-started);
     background-color: var(--color-started);
     color: var(--color-started-over);
 }
 
-td.progress-beaten, .reviewinfo-metadata-content.game-progress.progress-beaten .reviewinfo-metadata-icon {
+td.progress-beaten div, .reviewinfo-metadata-content.game-progress.progress-beaten .reviewinfo-metadata-icon {
     background-image: var(--gradient-beaten);
     background-color: var(--color-beaten);
     color: var(--color-beaten-over);
 }
 
-td.progress-completed, .reviewinfo-metadata-content.game-progress.progress-completed .reviewinfo-metadata-icon {
+td.progress-completed div, .reviewinfo-metadata-content.game-progress.progress-completed .reviewinfo-metadata-icon {
     background-image: var(--gradient-completed);
     background-color: var(--color-completed);
     color: var(--color-completed-over);
 }
 
-td.progress-mastered, .reviewinfo-metadata-content.game-progress.progress-mastered .reviewinfo-metadata-icon {
+td.progress-mastered div, .reviewinfo-metadata-content.game-progress.progress-mastered .reviewinfo-metadata-icon {
     background-image: var(--gradient-mastered);
     background-color: var(--color-mastered);
     color: var(--color-mastered-over);
 }
 
-td.progress-notapplicable, .reviewinfo-metadata-content.game-progress.progress-notapplicable .reviewinfo-metadata-icon {
+td.progress-notapplicable div, .reviewinfo-metadata-content.game-progress.progress-notapplicable .reviewinfo-metadata-icon {
     background-image: var(--gradient-notapplicable);
     background-color: var(--color-notapplicable);
     color: var(--color-notapplicable-over);
-}
-
-td.review-rating, td.game-progress {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    min-height: 38px;
-    text-align: center;
 }
 
 td.review-date {
@@ -476,7 +506,7 @@ td.review-hascontent {
 .reviewinfo-metadata {
     grid-area: metadata;
 
-	padding: var(--size-bar);
+	padding: 12px;
 
     display: grid;
     grid-template-columns: auto 1fr;
@@ -490,7 +520,7 @@ td.review-hascontent {
     display: flex;
     align-items: center;
 
-    height: 32px;
+    height: 25px;
 }
 
 .reviewinfo-metadata-label {
@@ -515,10 +545,10 @@ td.review-hascontent {
     justify-content: center;
     align-items: center;
 
-    height: 32px;
-    width: 32px;
+    height: 25px;
+    width: 25px;
 
-    border-radius: 100%;
+    border-radius: 30%;
     background-color: color-mix(in srgb, var(--color-current) 20%, transparent);
 }
 
