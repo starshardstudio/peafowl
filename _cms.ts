@@ -1,5 +1,4 @@
 import { default as lumeCMS } from "lume/cms/mod.ts";
-import {formatDateIso} from "./_utils/date.ts"
 
 const cms = lumeCMS();
 
