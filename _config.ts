@@ -80,7 +80,6 @@ site.use(feed({
 	limit: 10,
 	info: {
 		title: "Videogames",  // TODO: Change this to your site's videogame section's name!
-		
 	},
 	items: {
 		title: "=name"
