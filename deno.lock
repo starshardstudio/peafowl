@@ -507,6 +507,9 @@
       }
     }
   },
+  "redirects": {
+    "https://deno.land/x/lume/types.ts": "https://deno.land/x/lume@v2.3.3/types.ts"
+  },
   "remote": {
     "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.5.0/adapters/lume.ts": "e33373886b9920515a0f0da9c9c4d38974a66e447a65925ca522be41e7491af6",
     "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.5.0/core/cms.ts": "a423a22c4005c319918131841517a263dc2a89875ed4421c9b122656033cd3a4",
