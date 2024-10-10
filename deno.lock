@@ -5,6 +5,7 @@
       "jsr:@davidbonnet/astring@1.8.6": "jsr:@davidbonnet/astring@1.8.6",
       "jsr:@hono/hono@4.4.0": "jsr:@hono/hono@4.4.0",
       "jsr:@hono/hono@4.4.5": "jsr:@hono/hono@4.4.5",
+      "jsr:@hono/hono@4.6.3": "jsr:@hono/hono@4.6.3",
       "jsr:@libs/typing@2": "jsr:@libs/typing@2.1.1",
       "jsr:@std/assert@^0.224.0": "jsr:@std/assert@0.224.0",
       "jsr:@std/assert@^0.225.1": "jsr:@std/assert@0.225.3",
@@ -44,6 +45,7 @@
       "jsr:@std/html@0.224.1": "jsr:@std/html@0.224.1",
       "jsr:@std/html@0.224.2": "jsr:@std/html@0.224.2",
       "jsr:@std/html@1.0.0": "jsr:@std/html@1.0.0",
+      "jsr:@std/html@1.0.3": "jsr:@std/html@1.0.3",
       "jsr:@std/http@0.224.3": "jsr:@std/http@0.224.3",
       "jsr:@std/http@1.0.7": "jsr:@std/http@1.0.7",
       "jsr:@std/io@^0.224.0": "jsr:@std/io@0.224.1",
@@ -57,6 +59,7 @@
       "jsr:@std/log@0.224.2": "jsr:@std/log@0.224.2",
       "jsr:@std/log@0.224.8": "jsr:@std/log@0.224.8",
       "jsr:@std/media-types@0.224.1": "jsr:@std/media-types@0.224.1",
+      "jsr:@std/media-types@1.0.3": "jsr:@std/media-types@1.0.3",
       "jsr:@std/media-types@^1.0.0-rc.1": "jsr:@std/media-types@1.0.0-rc.1",
       "jsr:@std/media-types@^1.0.3": "jsr:@std/media-types@1.0.3",
       "jsr:@std/net@^0.224.2": "jsr:@std/net@0.224.3",
@@ -107,6 +110,9 @@
       },
       "@hono/hono@4.4.5": {
         "integrity": "8b0f005253251e7e3dcd5c1d54cd236b24db9634e5483815fad67aca2fb2eaf2"
+      },
+      "@hono/hono@4.6.3": {
+        "integrity": "a1f5a18cd12a0db54755b0461dd5a4e2d93a6f85403073eb710103eacc42daf3"
       },
       "@libs/typing@2.1.1": {
         "integrity": "964e61860716140671718b170d8de4a8705e05d86e7ed0c41883fe2687c91c80"
@@ -217,6 +223,9 @@
       },
       "@std/html@1.0.0": {
         "integrity": "389f2b8b0021ee75966003b307b849813a300d1c554cef8d69aec2d5d3922ff9"
+      },
+      "@std/html@1.0.3": {
+        "integrity": "7a0ac35e050431fb49d44e61c8b8aac1ebd55937e0dc9ec6409aa4bab39a7988"
       },
       "@std/http@0.224.3": {
         "integrity": "dac3a3640c730b9a4bcdb916b5231f4f2f5c141daf8dafc2b46011e1dab08eed",
@@ -587,6 +596,44 @@
     "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.5.1/storage/transformers/mod.ts": "d828136358c98c93b45b5a1f1c7f383f9788ec47ede04bcb03de8ee0b19c2b3c",
     "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.5.1/storage/transformers/yaml.ts": "87ce4b914a91ecec833558c29a5bbe8ca33f5cdf05141ba5e9c4e497aace561c",
     "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.5.1/types.ts": "adde55f4ab5b670888991433f4e1a1f97900fc8f67cb2c9882c9a8e679f70a9b",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/adapters/lume.ts": "4198e113e7a24f60ebc2b2d3ade808055d4512331f080c8f5dff31123f8e846b",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/cms.ts": "3acb977feeae45c9875332385c6709543e7cafc5cc1be6ec7be7f6fd0bc80af7",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/collection.ts": "0c95ac5d5e52e110453b40fb494ac7ae3179f6f775e9a5a6e708e9e86027c435",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/document.ts": "e280e1b8eac0bd5a22505b9a81f018346ebbdb9b674f66d6e790b193965fec29",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/git.ts": "ebcb06df6c89ad74dc3194d78c5a6bb88c54305e8f79b177c1f3151296760e98",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/routes/auth.ts": "b9a5c5b77169a3c5be46aa8dba15a187ed1dc2f6c9c8fb71ba35782e39cd2044",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/routes/collection.ts": "e6156d05a496caac1cd2d18ab4ca0d4e659f58ee374982f25ce01239dc4930ef",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/routes/document.ts": "2ea2958989a247830be88caaeecc092bcf52df00dc8979d31522ec4f555e2ee7",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/routes/files.ts": "d7388cbfe1bc15d658d1b8ac9bacfdbac5af249dc2959859ed89c346d20c687c",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/routes/index.ts": "d140a7577b88ab06a1a401e1a91334c6e56b8988adc6635443db822a5bf214e9",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/routes/versions.ts": "dcfd34b50fb0be72078915ae484a6c23868366c0afcbdc88d7cb4c1910c161c1",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/templates/breadcrumb.ts": "4252e88ab5aec21ce7f460cdb7cd29fd17a88cdd676817a0c09a9a15cad4d290",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/templates/collection/create.ts": "f6594304dd2a74b04be1979fc816e590c7a4ad0864c3e7acfdfd816d4977796c",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/templates/collection/edit.ts": "9d130e435ce711ab334bacb07013bd2c52d41e8537757413fd00616a53846959",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/templates/collection/list.ts": "65b90051f108603cf3fe9ca3691daf0b61305fa2f0bbc30e9a4fc5528fbe9b46",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/templates/document/edit.ts": "373f5dccf4cc5284c3988846ec8933200805e87b9bc47a53214e4fb95707cc36",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/templates/index.ts": "32b6b2959fe8386ee610bf9293253f0d6e28bff97f25966a0a9ab3ad836ed2ec",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/templates/layout.ts": "6d20aff05b74b96774754414f4db8468c685c0232ff1fef13788258c1aeb70b3",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/templates/notfound.ts": "c89b3b113a6cd847b7dfa6155688c01e8e53754e5f0548149971ae5da5c439cd",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/templates/tree.ts": "55fe000dafd47f1a6e91ff6aa879146f3a3812e7adf9e993b2602bb9e8b4ea98",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/templates/uploads/create.ts": "82218e3d530cabf98a505d876786faf913fc97fc40dc9e617deef3ceb8e78263",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/templates/uploads/list.ts": "2da0d560fbdea324c41adfee16d5a883856b8a090c3bc75f0d6cac65a644f225",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/templates/uploads/view.ts": "ad5cc54795b0a1afbfb3447a5df62865de4650c3c7de12a7984fae6f6b5b865a",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/upload.ts": "9d68f3274bc480be0f5ffc4fc65b7c2354c5b269f70c1579dad9aaa964111728",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/utils/data.ts": "395d4b7f33a7e4f84659fc3f3959c988eb64eca855f1f342c0ec7e55070b3602",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/utils/env.ts": "723cb01d9509e0942a32ff568314b5ac27152c94e0070dc0cd6a706c74f33a62",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/utils/event.ts": "a7915a3e6bf7b34c166ee3aefc8ca5aab1631de50e0d851f78d0e8c8d0c766d8",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/utils/path.ts": "a210f4dc0b040aa5fd6cf170640b79bd83315920ed7cd55b3382130b87e33487",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/core/utils/string.ts": "53c8f487947f89c3f5eacdafbfa7cf7c6bc6bd4321506bc62112bc7d96b9eb65",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/deps/hono.ts": "024d018920104aab7dbb5d380b5d584f19e16e389efa9097e3a5aa73ed277fb1",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/deps/std.ts": "e8ca9e4847dddad04eb7bd4609fa030987eabe59a19689e647bf9d35c96c2d23",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/fields/core.ts": "ca42cbfeaf62beadefdaf6b1813513839c1822cb690bc574f4ea949430a63c64",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/mod.ts": "8c0e794889d779e84137f4d3b9673f5a5a1083777afdffa571d0a7af54ddceac",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/storage/fs.ts": "2d45319ce0ece128c6a86dbff4f18d392d07a641c0bf1b8d616b0ae4d63fec92",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/storage/transformers/front_matter.ts": "d0809292ae1ccb367c7e7852a2b6bd383e4da531ff95da4a640afa181412fe0d",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/storage/transformers/json.ts": "eb5d664be2042cc266a4fc737bbeeb1b4eb586e2beab8ca1965b07c2b066ee68",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/storage/transformers/mod.ts": "d828136358c98c93b45b5a1f1c7f383f9788ec47ede04bcb03de8ee0b19c2b3c",
+    "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/storage/transformers/yaml.ts": "87ce4b914a91ecec833558c29a5bbe8ca33f5cdf05141ba5e9c4e497aace561c",
     "https://deno.land/std@0.170.0/_util/asserts.ts": "d0844e9b62510f89ce1f9878b046f6a57bf88f208a10304aab50efcb48365272",
     "https://deno.land/std@0.170.0/_util/os.ts": "8a33345f74990e627b9dfe2de9b040004b08ea5146c7c9e8fe9a29070d193934",
     "https://deno.land/std@0.170.0/encoding/base64.ts": "8605e018e49211efc767686f6f687827d7f5fd5217163e981d8d693105640d7a",
