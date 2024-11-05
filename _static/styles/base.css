@@ -154,7 +154,7 @@ abbr[title] i[class^="fa-"]::before {
 }
 
 .flex {
-    --gap: 2rem;
+    --gap: 4rem;
 
     display: flex;
     flex-wrap: wrap;
