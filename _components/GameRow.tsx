@@ -65,7 +65,7 @@ export function GameRow({game, columns = gameRowColumnKindDefault, priority}: Ga
             case "namesort": {
                 return (
                     <td key={index} className={`review-namesort`} hidden={true}>
-                        <data value={game.name ?? ""}/>
+                        <data value={game.name_sort ?? game.name ?? ""}/>
                     </td>
                 )
             }

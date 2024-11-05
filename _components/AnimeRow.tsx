@@ -73,7 +73,7 @@ export function AnimeRow({anime, columns = animeRowColumnKindDefault, priority}:
             case "namesort": {
                 return (
                     <td key={index} className={`review-namesort`} hidden={true}>
-                        <data value={anime.name ?? ""}/>
+                        <data value={anime.name_sort ?? anime.name ?? ""}/>
                     </td>
                 )
             }
