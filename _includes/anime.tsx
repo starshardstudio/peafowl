@@ -17,7 +17,7 @@ export default function(data: AnimeData, helpers: Lume.Helpers) {
 
     const dateSeparator = (data.progress || data.hours_played) ? <hr/> : null
 
-    const nameOriginalRow = (
+    const nameOriginalRow = data.name_original ? (
         <ReviewInfo.MetadataRow
             className={"anime-nameoriginal"}
             label={"Original name"}
@@ -26,7 +26,7 @@ export default function(data: AnimeData, helpers: Lume.Helpers) {
                 {data.name_original}
             </data>
         </ReviewInfo.MetadataRow>
-    )
+    ) : null
 
     const nameSeparator = (data.name_original) ? <hr/> : null
 
