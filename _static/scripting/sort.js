@@ -131,7 +131,7 @@ function readHasContent(a) {
 /**
  * @param a {HTMLTableRowElement}
  */
-function readProgress(a) {
+function readGameProgress(a) {
     for(const cell of a.cells) {
         if(cell.classList.contains("game-progress")) {
             /**
@@ -153,6 +153,35 @@ function readProgress(a) {
                     return 30;
                 case "completed":
                     return 40;
+                case "mastered":
+                    return 50;
+            }
+        }
+    }
+}
+
+
+/**
+ * @param a {HTMLTableRowElement}
+ */
+function readAnimeProgress(a) {
+    for(const cell of a.cells) {
+        if(cell.classList.contains("anime-progress")) {
+            /**
+             * @type {HTMLDataElement}
+             */
+            const data = cell.firstElementChild
+            switch (data.value) {
+                case undefined:
+                    return undefined;
+                case "unset":
+                    return undefined;
+                case "new":
+                    return 10;
+                case "started":
+                    return 20;
+                case "completed":
+                    return 35;
                 case "mastered":
                     return 50;
             }
@@ -229,7 +258,13 @@ function installSort(tableId) {
         }
         else if(cell.classList.contains("game-progress")) {
             cell.onclick = function() {
-                sortTable(tableId, readProgress, (a, b) => b - a)
+                sortTable(tableId, readGameProgress, (a, b) => b - a)
+            }
+            cell.classList.add("sortable")
+        }
+        else if(cell.classList.contains("anime-progress")) {
+            cell.onclick = function() {
+                sortTable(tableId, readAnimeProgress, (a, b) => b - a)
             }
             cell.classList.add("sortable")
         }
