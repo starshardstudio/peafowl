@@ -1,6 +1,6 @@
 import { ReviewData } from "./review.ts";
 
-export interface GameData extends ReviewData {
+export interface AnimeData extends ReviewData {
     name_original: string;
 
     active?: boolean;
