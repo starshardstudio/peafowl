@@ -4,6 +4,7 @@ _cache
 .env
 
 # Obsidian
+.trash
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 
