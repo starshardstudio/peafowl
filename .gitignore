@@ -1,3 +1,12 @@
+# Peafowl
 _site
 _cache
 .env
+
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Syncthing
+*.sync-conflict-*
+.syncthing*
