@@ -110,6 +110,8 @@ export default function(data: AnimeData, helpers: Lume.Helpers) {
                 metadata={<>
                     {dateRow}
                     {dateSeparator}
+                    {nameOriginalRow}
+                    {nameSeparator}
                     {progressRow}
                     {playedSeparator}
                     {purchasedOnRow}
