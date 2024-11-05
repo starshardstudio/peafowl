@@ -35,28 +35,28 @@ export function AnimeTable({id, anime, columns = animeRowColumnKindDefault, prio
         switch(column) {
             case "rating": return (
                 <th key={index} scope={"col"} className={`review-rating`}>
-                    <abbr title={"The rating of the game, from 1 to 100."}>
+                    <abbr title={"The rating of the anime, from 1 to 100."}>
                         <i className={`fa-sharp fa-solid fa-thumbs-up`}/>
                     </abbr>
                 </th>
             )
             case "progress": return (
-                <th key={index} scope={"col"} className={`game-progress`}>
-                    <abbr title={"The progress that has been made in the game."}>
+                <th key={index} scope={"col"} className={`anime-progress`}>
+                    <abbr title={"The progress that has been made in the anime."}>
                         <i className={`fa-sharp fa-solid fa-bars-progress`}/>
                     </abbr>
                 </th>
             )
             case "name": return (
                 <th key={index} scope={"col"} className={`review-name`}>
-                    <abbr title={"The title of the game."}>
+                    <abbr title={"The title of the anime."}>
                         Title
                     </abbr>
                 </th>
             )
             case "namesort": return (
                 <th key={index} scope={"col"} className={`review-namesort`} hidden={true}>
-                    <abbr title={"The title to sort the game as."}>
+                    <abbr title={"The title to sort the anime as."}>
                         Sort by
                     </abbr>
                 </th>

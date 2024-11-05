@@ -54,6 +54,19 @@ cms.document(
 	]
 )
 
+cms.document(
+	"list-anime",
+	"src:list-anime.md",
+	[
+		{
+			name: "content",
+			type: "markdown",
+			label: "Introduction",
+			description: "The text to display at the top of the page."
+		}
+	]
+)
+
 cms.collection(
 	"games",
 	"src:games/*.md",
