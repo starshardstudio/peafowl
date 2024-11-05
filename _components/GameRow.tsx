@@ -1,6 +1,6 @@
 import {formatDateIso} from "../_utils/date.ts"
 import {GameData} from "../_utils/game.ts"
-import {Progress, progressToClassName, progressToIconDef, progressToTitle} from "../_utils/progress.ts"
+import {GameProgress, gameProgressToClassName, gameProgressToIconDef, gameProgressToTitle} from "../_utils/game.ts"
 import {ratingToClassName} from "../_utils/rating.ts"
 
 
@@ -25,9 +25,9 @@ export function GameRow({game, columns = gameRowColumnKindDefault, priority}: Ga
 
     const ratingClass: string = ratingToClassName(game.rating)
 
-    const progressClass: string = progressToClassName(game.progress)
-    const progressIcon: string = progressToIconDef(game.progress)
-    const progressTitle: string = progressToTitle(game.progress)
+    const progressClass: string = gameProgressToClassName(game.progress)
+    const progressIcon: string = gameProgressToIconDef(game.progress)
+    const progressTitle: string = gameProgressToTitle(game.progress)
 
     const priorityClass: string = priority ? `priority-${priority}` : ""
 
@@ -45,7 +45,7 @@ export function GameRow({game, columns = gameRowColumnKindDefault, priority}: Ga
             case "progress": {
                 return (
                     <td key={index} className={`game-progress ${progressClass}`}>
-                        <data value={game.progress ?? Progress.Unset} title={progressTitle}>
+                        <data value={game.progress ?? GameProgress.Unset} title={progressTitle}>
                             {progressIcon && <i className={`fa-sharp fa-regular ${progressIcon} ${activeClassFa}`}></i>}
                         </data>
                     </td>

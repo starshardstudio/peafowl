@@ -3,7 +3,7 @@ import {default as site} from "../_config.ts"
 import {formatDateIso} from "../_utils/date.ts"
 import {GameData, GameIdentifier, GamePage} from "../_utils/game.ts"
 import {stringifyYaml} from "lume/cms/deps/std.ts"
-import {Progress} from "../_utils/progress.ts"
+import {GameProgress} from "../_utils/game.ts"
 
 /* This is arguably one of the worst scripts I've ever written. */
 
@@ -102,7 +102,7 @@ for(const game of games) {
         name_sort: page?.name_sort ?? game?.sort_as ?? "",
         rating: page?.rating ?? 0,
         active: page?.active ?? false,
-        progress: page?.progress ?? Progress.Unset,
+        progress: page?.progress ?? GameProgress.Unset,
         hours_played: Math.max(page?.hours_played ?? 0, Math.round((game?.playtime_forever ?? 0) / 60)),
         purchased_on: page?.purchased_on ?? NaN,
         started_on: page?.started_on ?? NaN,

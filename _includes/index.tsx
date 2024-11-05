@@ -1,7 +1,7 @@
 import {compareDate} from "../_utils/date.ts"
 import { GameData } from "../_utils/game.ts";
 import {GameTable} from "../_components/GameTable.tsx"
-import {compare_progress} from "../_utils/progress.ts"
+import {compareGameProgress} from "../_utils/game.ts"
 import {GlobalData} from "../_utils/site.ts"
 
 
@@ -62,7 +62,7 @@ export default function(data: GlobalData, helpers: Lume.Helpers) {
     )
 
     const progress_games = games
-        .sort((a, b) => -compare_progress(a, b))
+        .sort((a, b) => -compareGameProgress(a, b))
         .slice(0, 10)
 
     const progress_games_section = (

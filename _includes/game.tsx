@@ -1,6 +1,6 @@
 import {formatDateIso} from "../_utils/date.ts"
 import {GameData, GameIdentifier} from "../_utils/game.ts"
-import {Progress, progressToClassName, progressToIconDef, progressToTitle} from "../_utils/progress.ts"
+import {GameProgress, gameProgressToClassName, gameProgressToIconDef, gameProgressToTitle} from "../_utils/game.ts"
 import {ReviewInfo} from "../_components/ReviewInfo.tsx"
 
 
@@ -20,12 +20,12 @@ export default function(data: GameData, helpers: Lume.Helpers) {
 
     const progressRow = data.progress ? (
         <ReviewInfo.MetadataRow
-            className={`game-progress ${progressToClassName(data.progress)}`}
+            className={`game-progress ${gameProgressToClassName(data.progress)}`}
             label={"Progress"}
-            icon={<i className={`fa-sharp fa-regular ${progressToIconDef(data.progress)} ${data.active ? "fa-beat-fade" : ""}`}/>}
+            icon={<i className={`fa-sharp fa-regular ${gameProgressToIconDef(data.progress)} ${data.active ? "fa-beat-fade" : ""}`}/>}
         >
             <data value={data.progress}>
-                {progressToTitle(data.progress)}
+                {gameProgressToTitle(data.progress)}
             </data>
             {data.active &&
                 <>
@@ -56,7 +56,7 @@ export default function(data: GameData, helpers: Lume.Helpers) {
         <ReviewInfo.MetadataRow
             className={`game-purchasedon`}
             label={"Purchased on"}
-            icon={<i className={`fa-sharp fa-regular ${progressToIconDef(Progress.New)}`}/>}
+            icon={<i className={`fa-sharp fa-regular ${gameProgressToIconDef(GameProgress.New)}`}/>}
         >
             <time dateTime={purchasedOnValue}>
                 {purchasedOnValue}
@@ -69,7 +69,7 @@ export default function(data: GameData, helpers: Lume.Helpers) {
         <ReviewInfo.MetadataRow
             className={`game-startedon`}
             label={"Started on"}
-            icon={<i className={`fa-sharp fa-regular ${progressToIconDef(Progress.Started)}`}/>}
+            icon={<i className={`fa-sharp fa-regular ${gameProgressToIconDef(GameProgress.Started)}`}/>}
         >
             <time dateTime={startedOnValue}>
                 {startedOnValue}
@@ -82,7 +82,7 @@ export default function(data: GameData, helpers: Lume.Helpers) {
         <ReviewInfo.MetadataRow
             className={`game-beatenon`}
             label={"Beaten on"}
-            icon={<i className={`fa-sharp fa-regular ${progressToIconDef(Progress.Beaten)}`}/>}
+            icon={<i className={`fa-sharp fa-regular ${gameProgressToIconDef(GameProgress.Beaten)}`}/>}
         >
             <time dateTime={beatenOnValue}>
                 {beatenOnValue}
@@ -95,7 +95,7 @@ export default function(data: GameData, helpers: Lume.Helpers) {
         <ReviewInfo.MetadataRow
             className={`game-completedon`}
             label={"Completed on"}
-            icon={<i className={`fa-sharp fa-regular ${progressToIconDef(Progress.Completed)}`}/>}
+            icon={<i className={`fa-sharp fa-regular ${gameProgressToIconDef(GameProgress.Completed)}`}/>}
         >
             <time dateTime={completedOnValue}>
                 {completedOnValue}
@@ -108,7 +108,7 @@ export default function(data: GameData, helpers: Lume.Helpers) {
         <ReviewInfo.MetadataRow
             className={`game-masteredon`}
             label={"Mastered on"}
-            icon={<i className={`fa-sharp fa-regular ${progressToIconDef(Progress.Mastered)}`}/>}
+            icon={<i className={`fa-sharp fa-regular ${gameProgressToIconDef(GameProgress.Mastered)}`}/>}
         >
             <time dateTime={masteredOnValue}>
                 {masteredOnValue}
