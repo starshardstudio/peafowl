@@ -1,6 +1,5 @@
 import {formatDateIso} from "../_utils/date.ts"
-import {GameData, GameIdentifier} from "../_utils/game.ts"
-import {GameProgress, gameProgressToClassName, gameProgressToIconDef, gameProgressToTitle} from "../_utils/game.ts"
+import {GameData, GameIdentifier, GameProgress, gameProgressToClassName, gameProgressToIconDef, gameProgressToTitle} from "../_utils/game.ts"
 import {ReviewInfo} from "../_components/ReviewInfo.tsx"
 
 
