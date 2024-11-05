@@ -12,7 +12,7 @@ export interface AnimeData extends ReviewData {
     mastered_on?: Date;
 }
 
-export type AnimePage = Lume.Page<GameData>;
+export type AnimePage = Lume.Page<AnimeData>;
 
 export enum AnimeProgress {
     Unset = "",
@@ -91,6 +91,6 @@ export function animeProgressToNumber(progress?: AnimeProgress): number {
     }
 }
 
-export function compareAnimeProgress(a: GameData, b: GameData): number {
+export function compareAnimeProgress(a: AnimeData, b: AnimeData): number {
     return animeProgressToNumber(a.progress) - animeProgressToNumber(b.progress);
 }
