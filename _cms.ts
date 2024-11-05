@@ -289,8 +289,8 @@ cms.collection(
 					label: "Started: you have started the anime, but not reached its end.",
 				},
 				{
-					value: "complete",
-					label: "Complete: you have watched the anime to its end.",
+					value: "completed",
+					label: "Completed: you have watched the anime to its end.",
 				},
 				{
 					value: "mastered",

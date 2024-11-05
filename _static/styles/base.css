@@ -237,37 +237,37 @@ tr.priority-rating.rating-perfect, .priority-mixed.rating-perfect td:is(.review-
     --color-current-over: var(--color-perfect-over);
 }
 
-tr.priority-progress.progress-unset, .priority-mixed.progress-unset td:is(.game-progress, .game-hoursplayed) {
+tr.priority-progress.progress-unset, .priority-mixed.progress-unset td:is(.game-progress, .game-hoursplayed, .anime-progress) {
     --color-current: var(--color-unset);
     --color-current-over: var(--color-unset-over);
 }
 
-tr.priority-progress.progress-new, .priority-mixed.progress-new td:is(.game-progress, .game-hoursplayed) {
+tr.priority-progress.progress-new, .priority-mixed.progress-new td:is(.game-progress, .game-hoursplayed, .anime-progress) {
     --color-current: var(--color-new);
     --color-current-over: var(--color-new-over);
 }
 
-tr.priority-progress.progress-started, .priority-mixed.progress-started td:is(.game-progress, .game-hoursplayed) {
+tr.priority-progress.progress-started, .priority-mixed.progress-started td:is(.game-progress, .game-hoursplayed, .anime-progress) {
     --color-current: var(--color-started);
     --color-current-over: var(--color-started-over);
 }
 
-tr.priority-progress.progress-beaten, .priority-mixed.progress-beaten td:is(.game-progress, .game-hoursplayed) {
+tr.priority-progress.progress-beaten, .priority-mixed.progress-beaten td:is(.game-progress, .game-hoursplayed, .anime-progress) {
     --color-current: var(--color-beaten);
     --color-current-over: var(--color-beaten-over);
 }
 
-tr.priority-progress.progress-completed, .priority-mixed.progress-completed td:is(.game-progress, .game-hoursplayed) {
+tr.priority-progress.progress-completed, .priority-mixed.progress-completed td:is(.game-progress, .game-hoursplayed, .anime-progress) {
     --color-current: var(--color-completed);
     --color-current-over: var(--color-completed-over);
 }
 
-tr.priority-progress.progress-mastered, .priority-mixed.progress-mastered td:is(.game-progress, .game-hoursplayed) {
+tr.priority-progress.progress-mastered, .priority-mixed.progress-mastered td:is(.game-progress, .game-hoursplayed, .anime-progress) {
     --color-current: var(--color-mastered);
     --color-current-over: var(--color-mastered-over);
 }
 
-tr.priority-progress.progress-notapplicable, .priority-mixed.progress-notapplicable td:is(.game-progress, .game-hoursplayed) {
+tr.priority-progress.progress-notapplicable, .priority-mixed.progress-notapplicable td:is(.game-progress, .game-hoursplayed, .anime-progress) {
     --color-current: var(--color-notapplicable);
     --color-current-over: var(--color-notapplicable-over);
 }
@@ -286,7 +286,7 @@ tbody th {
     font-weight: 700;
 }
 
-td.review-rating, td.game-progress {
+td.review-rating, td.game-progress, td.anime-progress {
     border-bottom: 0;
 
     font-family: var(--font-title), serif;
@@ -318,49 +318,49 @@ td.rating-perfect {
     color: var(--color-perfect-over);
 }
 
-td.progress-unset, .reviewinfo-metadata-content.game-progress.progress-unset .reviewinfo-metadata-icon {
+td.progress-unset, .reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-unset .reviewinfo-metadata-icon {
     background-image: var(--image-unset);
     background-color: var(--color-unset);
     color: var(--color-unset-over);
 }
 
-td.progress-new, .reviewinfo-metadata-content.game-progress.progress-new .reviewinfo-metadata-icon {
+td.progress-new, .reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-new .reviewinfo-metadata-icon {
     background-image: var(--image-new);
     background-color: var(--color-new);
     color: var(--color-new-over);
 }
 
-td.progress-started, .reviewinfo-metadata-content.game-progress.progress-started .reviewinfo-metadata-icon {
+td.progress-started, .reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-started .reviewinfo-metadata-icon {
     background-image: var(--gradient-started);
     background-color: var(--color-started);
     color: var(--color-started-over);
 }
 
-td.progress-beaten, .reviewinfo-metadata-content.game-progress.progress-beaten .reviewinfo-metadata-icon {
+td.progress-beaten, .reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-beaten .reviewinfo-metadata-icon {
     background-image: var(--gradient-beaten);
     background-color: var(--color-beaten);
     color: var(--color-beaten-over);
 }
 
-td.progress-completed, .reviewinfo-metadata-content.game-progress.progress-completed .reviewinfo-metadata-icon {
+td.progress-completed, .reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-completed .reviewinfo-metadata-icon {
     background-image: var(--gradient-completed);
     background-color: var(--color-completed);
     color: var(--color-completed-over);
 }
 
-td.progress-mastered, .reviewinfo-metadata-content.game-progress.progress-mastered .reviewinfo-metadata-icon {
+td.progress-mastered, .reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-mastered .reviewinfo-metadata-icon {
     background-image: var(--gradient-mastered);
     background-color: var(--color-mastered);
     color: var(--color-mastered-over);
 }
 
-td.progress-notapplicable, .reviewinfo-metadata-content.game-progress.progress-notapplicable .reviewinfo-metadata-icon {
+td.progress-notapplicable, .reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-notapplicable .reviewinfo-metadata-icon {
     background-image: var(--gradient-notapplicable);
     background-color: var(--color-notapplicable);
     color: var(--color-notapplicable-over);
 }
 
-td.review-rating, td.game-progress {
+td.review-rating, td.game-progress, td.anime-progress {
     width: 38px;
     height: 38px;
     min-width: 38px;

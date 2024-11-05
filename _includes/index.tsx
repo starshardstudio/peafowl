@@ -230,12 +230,13 @@ export default function (data: GlobalData, helpers: Lume.Helpers) {
                 </div>
             </section>
         )
-        : null;    
+        : null;
 
     return (
         <main id={"index-main"} className={"flex flex-v"}>
             {intro_section}
             {games_cols}
+            {anime_cols}
         </main>
     );
 }
