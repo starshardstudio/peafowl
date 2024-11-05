@@ -7,6 +7,7 @@ import Site from "lume/core/site.ts";
 
 const site: Site = lume({
 	prettyUrls: false,
+	location: new URL(""),  // TODO: Enter the base URL of your website here, or links won't work!
 })
 
 site.use(jsx({}))
