@@ -28,7 +28,7 @@ export default function (data: Lume.Data, helpers: Lume.Helpers) {
                     <a href={helpers.url("/anime/index.json")}>
                         <i className={"fa-sharp fa-solid fa-brackets-curly"} />
                         {" "}
-                        JSON
+                        Raw
                     </a>
                 </small>
             </h2>

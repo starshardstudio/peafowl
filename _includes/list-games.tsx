@@ -25,7 +25,7 @@ export default function(data: Lume.Data, helpers: Lume.Helpers) {
                 </small>
                 <small>
                     <a href={helpers.url("/games/index.json")}>
-                        <i className={"fa-sharp fa-solid fa-brackets-curly"}/> JSON
+                        <i className={"fa-sharp fa-solid fa-brackets-curly"}/> Raw
                     </a>
                 </small>
             </h2>
