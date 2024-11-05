@@ -245,7 +245,7 @@ cms.collection(
 		{
 			name: "active",
 			type: "checkbox",
-			label: "Now playing",
+			label: "Now watching",
 			description: "Whether you're currently watching this anime or not. If checked, prominently displays the anime on the home page."
 		},
 		{
@@ -303,6 +303,7 @@ cms.collection(
 			label: "Mastered on",
 			description: "The date on which you've achieved mastery of the anime.",
 		},
+		/* 
 		{
 			name: "identifiers",
 			type: "choose-list",
@@ -310,6 +311,7 @@ cms.collection(
 			description: "Details that unequivocabily and globally identify the anime. Shouldn't be edited manually.",
 			fields: []
 		},
+		*/
 		{
 			name: "content",
 			type: "markdown",
