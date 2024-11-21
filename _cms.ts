@@ -359,7 +359,7 @@ cms.collection(
 					]
 				},
 				{
-					name: "annid",
+					name: "ann",
 					type: "object",
 					label: "Anime News Network",
 					description: "The anime, as it is stored on Anime News Network.",
