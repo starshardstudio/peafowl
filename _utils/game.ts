@@ -1,17 +1,12 @@
-import { ReviewData } from "./review.ts";
+import { ReviewData, ReviewIdentifier, ReviewWikidataIdentifier } from "./review.ts";
 
-export interface GameBaseIdentifier {
-    type: string;
+export interface GameSteamIdentifier extends ReviewIdentifier {
+    type: "steam";
+    appid: string;
     synced_on?: string;
 }
 
-export interface GameSteamIdentifier extends GameBaseIdentifier {
-    type: "steam";
-    appid: string;
-    name?: string;
-}
-
-export type GameIdentifier = GameSteamIdentifier;
+export type GameIdentifier = ReviewWikidataIdentifier | GameSteamIdentifier;
 
 export interface GameData extends ReviewData {
     active?: boolean;

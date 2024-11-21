@@ -1,5 +1,5 @@
 import {formatDateIso} from "../_utils/date.ts"
-import {AnimeData, AnimeProgress, animeProgressToClassName, animeProgressToIconDef, animeProgressToTitle} from "../_utils/anime.ts"
+import {AnimeData, AnimeIdentifier, AnimeProgress, animeProgressToClassName, animeProgressToIconDef, animeProgressToTitle} from "../_utils/anime.ts"
 import {ReviewInfo} from "../_components/ReviewInfo.tsx"
 
 
@@ -102,6 +102,73 @@ export default function(data: AnimeData, helpers: Lume.Helpers) {
         </ReviewInfo.MetadataRow>
     ) : null
 
+    const milestonesSeparator = ((data.identifiers?.length ?? 0) > 0) ? <hr/> : null
+
+    const identifiersRows = data.identifiers?.map((identifier: AnimeIdentifier, index: number) => {
+        switch(identifier.type) {
+            case "wikidata":
+                return (
+                    <ReviewInfo.MetadataRow
+                        key={index}
+                        className={`review-identifier-wikidata`}
+                        label={<span><i className={`fa-sharp fa-regular fa-barcode`}/>&nbsp;Wikidata</span>}
+                    >
+                        <a href={`https://www.wikidata.org/wiki/Q${identifier.q}`}>
+                            Q{identifier.q}
+                        </a>
+                    </ReviewInfo.MetadataRow>
+                )
+            case "anidb":
+                return (
+                    <ReviewInfo.MetadataRow
+                        key={index}
+                        className={`anime-identifier-anidb`}
+                        label={<span><i className={`fa-sharp fa-regular fa-database`}/>&nbsp;AniDB</span>}
+                    >
+                        <a href={`https://anidb.net/anime/${identifier.aid}`}>
+                            {identifier.aid}
+                        </a>
+                    </ReviewInfo.MetadataRow>
+                )
+            case "mal":
+                return (
+                    <ReviewInfo.MetadataRow
+                        key={index}
+                        className={`anime-identifier-mal`}
+                        label={<span><i className={`fa-sharp fa-regular fa-list-check`}/>&nbsp;MyAnimeList</span>}
+                    >
+                        <a href={`https://myanimelist.net/anime/${identifier.id}`}>
+                            {identifier.id}
+                        </a>
+                    </ReviewInfo.MetadataRow>
+                )
+            case "ann":
+                return (
+                    <ReviewInfo.MetadataRow
+                        key={index}
+                        className={`anime-identifier-ann`}
+                        label={<span><i className={`fa-sharp fa-regular fa-circles-overlap`}/>&nbsp;Anime News Network</span>}
+                    >
+                        <a href={`https://www.animenewsnetwork.com/encyclopedia/anime.php?id=${identifier.id}`}>
+                            {identifier.id}
+                        </a>
+                    </ReviewInfo.MetadataRow>
+                )
+            case "anilist":
+                return (
+                    <ReviewInfo.MetadataRow
+                        key={index}
+                        className={`anime-identifier-anilist`}
+                        label={<span><i className={`fa-sharp fa-regular fa-circles-overlap`}/>&nbsp;Anilist</span>}
+                    >
+                        <a href={`https://anilist.co/anime/${identifier.id}/`}>
+                            {identifier.id}
+                        </a>
+                    </ReviewInfo.MetadataRow>
+                )
+        }
+    })
+
     return (
         <main id={"anime-main"}>
             <ReviewInfo
@@ -118,6 +185,8 @@ export default function(data: AnimeData, helpers: Lume.Helpers) {
                     {startedOnRow}
                     {completedOnRow}
                     {masteredOnRow}
+                    {milestonesSeparator}
+                    {identifiersRows}
                 </>}
             >
                 {data.children}

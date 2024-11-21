@@ -2,6 +2,16 @@ import {Rating} from "./rating.ts"
 import {GlobalData} from "./site.ts"
 
 
+export interface ReviewIdentifier {
+    type: string;
+}
+
+export interface ReviewWikidataIdentifier extends ReviewIdentifier {
+    type: "wikidata",
+    q: string,
+}
+
+
 export interface ReviewData extends GlobalData {
     name?: string,
     name_sort?: string,

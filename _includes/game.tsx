@@ -119,6 +119,18 @@ export default function(data: GameData, helpers: Lume.Helpers) {
 
     const identifiersRows = data.identifiers?.map((identifier: GameIdentifier, index: number) => {
         switch(identifier.type) {
+            case "wikidata":
+                return (
+                    <ReviewInfo.MetadataRow
+                        key={index}
+                        className={`review-identifier-wikidata`}
+                        label={<span><i className={`fa-sharp fa-regular fa-barcode`}/>&nbsp;Wikidata</span>}
+                    >
+                        <a href={`https://www.wikidata.org/wiki/Q${identifier.q}`}>
+                            Q{identifier.q}
+                        </a>
+                    </ReviewInfo.MetadataRow>
+                )
             case "steam":
                 return (
                     <ReviewInfo.MetadataRow
@@ -127,7 +139,7 @@ export default function(data: GameData, helpers: Lume.Helpers) {
                         label={<span><i className={`fa-brands fa-steam`}/>&nbsp;Steam</span>}
                     >
                         <a href={`https://store.steampowered.com/app/${identifier.appid}/`}>
-                            {identifier.name ?? identifier.appid}
+                            {identifier.appid}
                         </a>
                     </ReviewInfo.MetadataRow>
                 )

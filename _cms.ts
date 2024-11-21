@@ -181,7 +181,7 @@ cms.collection(
 			name: "identifiers",
 			type: "choose-list",
 			label: "Identifiers",
-			description: "Details that unequivocabily and globally identify the game. Shouldn't be edited manually.",
+			description: "Details that unequivocabily and globally identify the game. Edit manually at your own risk.",
 			fields: [
 				{
 					name: "steam",
@@ -193,22 +193,30 @@ cms.collection(
 							name: "appid",
 							type: "text",
 							label: "AppID",
-							description: "The AppID that the game has on Steam. Usually ends with a 0. Can be obtained from the store page link, after the /app/ segment.",
-						},
-						{
-							name: "name",
-							type: "text",
-							label: "Name",
-							description: "The title of the game, as it appears on Steam."
+							description: "The AppID that the game has on Steam. Usually ends with a 0. Can be obtained from the store page link after the /app/ segment.",
 						},
 						{
 							name: "synced_on",
 							type: "date",
 							label: "Last sync",
-							description: "The date of the last sync."
+							description: "The date of the last sync via `deno task import-steam`."
 						}
 					]
-				}
+				},
+				{
+					name: "wikidata",
+					type: "object",
+					label: "Wikidata",
+					description: "The game, stored as a Wikidata item.",
+					fields: [
+						{
+							name: "q",
+							type: "number",
+							label: "Wikidata identifier",
+							description: "The ID that the item has on Wikidata. The number following the `Q`.",
+						},
+					]
+				},
 			]
 		},
 		{
@@ -316,15 +324,84 @@ cms.collection(
 			label: "Mastered on",
 			description: "The date on which you've achieved mastery of the anime.",
 		},
-		/* 
 		{
 			name: "identifiers",
 			type: "choose-list",
 			label: "Identifiers",
-			description: "Details that unequivocabily and globally identify the anime. Shouldn't be edited manually.",
-			fields: []
+			description: "Details that unequivocabily and globally identify the anime. Edit manually at your own risk.",
+			fields: [
+				{
+					name: "mal",
+					type: "object",
+					label: "MyAnimeList",
+					description: "The anime, as it is stored on MyAnimeList.",
+					fields: [
+						{
+							name: "id",
+							type: "text",
+							label: "MAL ID",
+							description: "The anime ID that the anime has on MyAnimeList. Can be obtained from the anime page link after the `/anime/` segment.",
+						},
+					]
+				},
+				{
+					name: "anidb",
+					type: "object",
+					label: "AniDB",
+					description: "The anime, as it is stored on AniDB.",
+					fields: [
+						{
+							name: "aid",
+							type: "text",
+							label: "AID",
+							description: "The anime ID that the anime has on AniDB. Can be obtained from the anime page link, after the `/anime/` segment, or from the `aid` query parameter.",
+						},
+					]
+				},
+				{
+					name: "annid",
+					type: "object",
+					label: "Anime News Network",
+					description: "The anime, as it is stored on Anime News Network.",
+					fields: [
+						{
+							name: "id",
+							type: "text",
+							label: "ANN ID",
+							description: "The anime ID that the anime has on AniDB. Can be obtained from the anime page link from the `id` query parameter.",
+						},
+					]
+				},
+				{
+					name: "anilist",
+					type: "object",
+					label: "Anilist",
+					description: "The anime, as it is stored on Anilist.",
+					fields: [
+						{
+							name: "id",
+							type: "text",
+							label: "Anilist ID",
+							description: "The anime ID that the anime has on Anilist. Can be obtained from the anime page link after the `/anime/` segment.",
+						},
+					]
+				},
+				{
+					name: "wikidata",
+					type: "object",
+					label: "Wikidata",
+					description: "The anime, stored as a Wikidata item.",
+					fields: [
+						{
+							name: "q",
+							type: "text",
+							label: "Wikidata identifier",
+							description: "The ID that the item has on Wikidata. The number following the `Q`.",
+						},
+					]
+				},
+			]
 		},
-		*/
 		{
 			name: "content",
 			type: "markdown",

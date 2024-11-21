@@ -1,4 +1,26 @@
-import { ReviewData } from "./review.ts";
+import { ReviewData, ReviewIdentifier, ReviewWikidataIdentifier } from "./review.ts";
+
+export interface AnimeAnidbIdentifier extends ReviewIdentifier {
+    type: "anidb";
+    aid: string;
+}
+
+export interface AnimeMalIdentifier extends ReviewIdentifier {
+    type: "mal";
+    id: string;
+}
+
+export interface AnimeAnnIdentifier extends ReviewIdentifier {
+    type: "ann";
+    id: string;
+}
+
+export interface AnimeAnilistIdentifier extends ReviewIdentifier {
+    type: "anilist";
+    id: string;
+}
+
+export type AnimeIdentifier = ReviewWikidataIdentifier | AnimeAnidbIdentifier | AnimeMalIdentifier | AnimeAnnIdentifier | AnimeAnilistIdentifier;
 
 export interface AnimeData extends ReviewData {
     name_original: string;
