@@ -135,7 +135,7 @@ export default function(data: AnimeData, helpers: Lume.Helpers) {
                     <ReviewInfo.MetadataRow
                         key={index}
                         className={`anime-identifier-mal`}
-                        label={<span><i className={`fa-sharp fa-regular fa-list-check`}/>&nbsp;MyAnimeList</span>}
+                        label={<span><i className={`fa-sharp fa-regular fa-list-check`}/>&nbsp;MAL</span>}
                     >
                         <a href={`https://myanimelist.net/anime/${identifier.id}`}>
                             {identifier.id}
@@ -147,7 +147,7 @@ export default function(data: AnimeData, helpers: Lume.Helpers) {
                     <ReviewInfo.MetadataRow
                         key={index}
                         className={`anime-identifier-ann`}
-                        label={<span><i className={`fa-sharp fa-regular fa-circles-overlap`}/>&nbsp;Anime News Network</span>}
+                        label={<span><i className={`fa-sharp fa-regular fa-circles-overlap`}/>&nbsp;ANN</span>}
                     >
                         <a href={`https://www.animenewsnetwork.com/encyclopedia/anime.php?id=${identifier.id}`}>
                             {identifier.id}
