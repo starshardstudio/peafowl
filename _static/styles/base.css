@@ -286,13 +286,6 @@ tbody th {
     font-weight: 700;
 }
 
-td.review-rating, td.game-progress, td.anime-progress {
-    border-bottom: 0;
-
-    font-family: var(--font-title), serif;
-    font-weight: 700;
-}
-
 td.rating-unset {
     background-color: var(--color-unset);
     color: var(--color-unset-over);
@@ -366,6 +359,11 @@ td.review-rating, td.game-progress, td.anime-progress {
     min-width: 38px;
     min-height: 38px;
     text-align: center;
+
+    border-bottom: 0;
+
+    font-family: var(--font-title), serif;
+    font-weight: 700;
 }
 
 td.review-date {
