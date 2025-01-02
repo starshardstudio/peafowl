@@ -55,7 +55,7 @@ export function animeProgressToIconDef(progress?: AnimeProgress): string {
         case AnimeProgress.Started:
             return "fa-play";
         case AnimeProgress.Completed:
-            return "fa-circle-check";
+            return "fa-star";
         case AnimeProgress.Mastered:
             return "fa-heart";
     }

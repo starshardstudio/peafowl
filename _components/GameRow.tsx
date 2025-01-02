@@ -46,7 +46,7 @@ export function GameRow({game, columns = gameRowColumnKindDefault, priority}: Ga
                 return (
                     <td key={index} className={`game-progress ${progressClass}`}>
                         <data value={game.progress ?? GameProgress.Unset} title={progressTitle}>
-                            {progressIcon && <i className={`fa-sharp fa-regular ${progressIcon} ${activeClassFa}`}></i>}
+                            {progressIcon && <i className={`fa-sharp-duotone fa-regular ${progressIcon} ${activeClassFa}`}></i>}
                         </data>
                     </td>
                 )

@@ -42,17 +42,17 @@ export function gameProgressToIconDef(progress?: GameProgress): string {
         case GameProgress.Unset:
             return "";
         case GameProgress.NotApplicable:
-            return "fa-x";
+            return "fa-hexagon";
         case GameProgress.New:
             return "fa-ellipsis";
         case GameProgress.Started:
             return "fa-play";
         case GameProgress.Beaten:
-            return "fa-circle-check";
+            return "fa-circle";
         case GameProgress.Completed:
             return "fa-star";
         case GameProgress.Mastered:
-            return "fa-trophy";
+            return "fa-heart";
     }
 }
 

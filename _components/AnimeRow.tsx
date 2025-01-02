@@ -45,7 +45,7 @@ export function AnimeRow({anime, columns = animeRowColumnKindDefault, priority}:
                 return (
                     <td key={index} className={`anime-progress ${progressClass}`}>
                         <data value={anime.progress ?? AnimeProgress.Unset} title={progressTitle}>
-                            {progressIcon && <i className={`fa-sharp fa-regular ${progressIcon} ${activeClassFa}`}></i>}
+                            {progressIcon && <i className={`fa-sharp-duotone fa-regular ${progressIcon} ${activeClassFa}`}></i>}
                         </data>
                     </td>
                 )

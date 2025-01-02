@@ -29,27 +29,27 @@
     --color-perfect: #531DFF;
     --color-perfect-over: #FFFFFF;
 
-    --color-new: #394739;
+    --color-new: #709470;
     --color-new-over: #a8e0a8;
-    --image-new: linear-gradient(0deg, #394739 0%, #496149 100%);
+    --gradient-new: linear-gradient(0deg, #394739 0%, #496149 100%);
 
-    --color-started: #82562b;
+    --color-started: #d4a483;
     --color-started-over: #ffe1bf;
     --gradient-started: linear-gradient(45deg, #a86747 0%, #50382b 100%);
 
-    --color-beaten: #a6a6a6;
+    --color-beaten: #dddddd;
     --color-beaten-over: #111111;
     --gradient-beaten: radial-gradient(#dddddd 0%, #737373 100%);
 
-    --color-completed: #b37e36;
+    --color-completed: #ffd900;
     --color-completed-over: #6c3200;
     --gradient-completed: linear-gradient(105deg, #cd6d1d 0%, #ffea00 50%, #cd6d1d 100%);
 
-    --color-mastered: #33b4ff;
-    --color-mastered-over: #58ffff;
-    --gradient-mastered: conic-gradient(from 180deg at 50% 71%, #0055ff 0%, #000070 50%, #0055ff 100%);
+    --color-mastered: #00ffff;
+    --color-mastered-over: #000070;
+    --gradient-mastered: conic-gradient(from 180deg at 50% 71%, #58ffff 0%, #00b7ff 50%, #58ffff 100%);
 
-    --color-notapplicable: #812281;
+    --color-notapplicable: #c64bc6;
     --color-notapplicable-over: #ff6dff;
     --gradient-notapplicable: radial-gradient(#220f22 0%, #812281 150%);
 
@@ -63,6 +63,13 @@
         --color-body-over: #1E1E1E;
 
         --color-link: #006666;
+
+        --color-new: #709470;
+        --color-started: #50382b;
+        --color-beaten: #777777;
+        --color-completed: #b68e00;
+        --color-mastered: #0055ff;
+        --color-notapplicable: #4d194d;
     }
 }
 
@@ -212,64 +219,29 @@ tr {
     height: 38px;
 }
 
-tr.priority-rating.rating-unset, .priority-mixed.rating-unset td:is(.review-rating, .review-date, .review-name, .review-hascontent), .reviewinfo.rating-unset {
+tr.priority-rating.rating-unset, .priority-mixed.rating-unset td, .reviewinfo.rating-unset {
     --color-current: var(--color-unset);
     --color-current-over: var(--color-unset-over);
 }
 
-tr.priority-rating.rating-bad, .priority-mixed.rating-bad td:is(.review-rating, .review-date, .review-name, .review-hascontent), .reviewinfo.rating-bad {
+tr.priority-rating.rating-bad, .priority-mixed.rating-bad td, .reviewinfo.rating-bad {
     --color-current: var(--color-bad);
     --color-current-over: var(--color-bad-over);
 }
 
-tr.priority-rating.rating-mixed, .priority-mixed.rating-mixed td:is(.review-rating, .review-date, .review-name, .review-hascontent), .reviewinfo.rating-mixed {
+tr.priority-rating.rating-mixed, .priority-mixed.rating-mixed td, .reviewinfo.rating-mixed {
     --color-current: var(--color-mixed);
     --color-current-over: var(--color-mixed-over);
 }
 
-tr.priority-rating.rating-good, .priority-mixed.rating-good td:is(.review-rating, .review-date, .review-name, .review-hascontent), .reviewinfo.rating-good {
+tr.priority-rating.rating-good, .priority-mixed.rating-good td, .reviewinfo.rating-good {
     --color-current: var(--color-good);
     --color-current-over: var(--color-good-over);
 }
 
-tr.priority-rating.rating-perfect, .priority-mixed.rating-perfect td:is(.review-rating, .review-date, .review-name, .review-hascontent), .reviewinfo.rating-perfect {
+tr.priority-rating.rating-perfect, .priority-mixed.rating-perfect td, .reviewinfo.rating-perfect {
     --color-current: var(--color-perfect);
     --color-current-over: var(--color-perfect-over);
-}
-
-tr.priority-progress.progress-unset, .priority-mixed.progress-unset td:is(.game-progress, .game-hoursplayed, .anime-progress) {
-    --color-current: var(--color-unset);
-    --color-current-over: var(--color-unset-over);
-}
-
-tr.priority-progress.progress-new, .priority-mixed.progress-new td:is(.game-progress, .game-hoursplayed, .anime-progress) {
-    --color-current: var(--color-new);
-    --color-current-over: var(--color-new-over);
-}
-
-tr.priority-progress.progress-started, .priority-mixed.progress-started td:is(.game-progress, .game-hoursplayed, .anime-progress) {
-    --color-current: var(--color-started);
-    --color-current-over: var(--color-started-over);
-}
-
-tr.priority-progress.progress-beaten, .priority-mixed.progress-beaten td:is(.game-progress, .game-hoursplayed, .anime-progress) {
-    --color-current: var(--color-beaten);
-    --color-current-over: var(--color-beaten-over);
-}
-
-tr.priority-progress.progress-completed, .priority-mixed.progress-completed td:is(.game-progress, .game-hoursplayed, .anime-progress) {
-    --color-current: var(--color-completed);
-    --color-current-over: var(--color-completed-over);
-}
-
-tr.priority-progress.progress-mastered, .priority-mixed.progress-mastered td:is(.game-progress, .game-hoursplayed, .anime-progress) {
-    --color-current: var(--color-mastered);
-    --color-current-over: var(--color-mastered-over);
-}
-
-tr.priority-progress.progress-notapplicable, .priority-mixed.progress-notapplicable td:is(.game-progress, .game-hoursplayed, .anime-progress) {
-    --color-current: var(--color-notapplicable);
-    --color-current-over: var(--color-notapplicable-over);
 }
 
 td, th {
@@ -311,43 +283,90 @@ td.rating-perfect {
     color: var(--color-perfect-over);
 }
 
-td.progress-unset, .reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-unset .reviewinfo-metadata-icon {
+td:is(.game-progress, .anime-progress) i {
+    --fa-primary-color: var(--color-progress);
+    --fa-primary-opacity: 1.00;
+    --fa-secondary-color: transparent;
+    --fa-secondary-opacity: 0.75;
+}
+
+td:is(.game-progress, .anime-progress) i::after {
+    background-clip: text;
+    background-image: var(--gradient-progress);
+}
+
+td.progress-unset {
+    --color-progress: var(--color-unset);
+    --gradient-progress: var(--gradient-unset);
+}
+
+td.progress-new {
+    --color-progress: var(--color-new);
+    --gradient-progress: var(--gradient-new);
+}
+
+td.progress-started {
+    --color-progress: var(--color-started);
+    --gradient-progress: var(--gradient-started);
+}
+
+td.progress-beaten {
+    --color-progress: var(--color-beaten);
+    --gradient-progress: var(--gradient-beaten);
+}
+
+td.progress-completed {
+    --color-progress: var(--color-completed);
+    --gradient-progress: var(--gradient-completed);
+}
+
+td.progress-mastered {
+    --color-progress: var(--color-mastered);
+    --gradient-progress: var(--gradient-mastered);
+}
+
+td.progress-notapplicable {
+    --color-progress: var(--color-notapplicable);
+    --gradient-progress: var(--gradient-notapplicable);
+}
+
+.reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-unset .reviewinfo-metadata-icon {
     background-image: var(--image-unset);
     background-color: var(--color-unset);
     color: var(--color-unset-over);
 }
 
-td.progress-new, .reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-new .reviewinfo-metadata-icon {
-    background-image: var(--image-new);
+.reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-new .reviewinfo-metadata-icon {
+    background-image: var(--gradient-new);
     background-color: var(--color-new);
     color: var(--color-new-over);
 }
 
-td.progress-started, .reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-started .reviewinfo-metadata-icon {
+.reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-started .reviewinfo-metadata-icon {
     background-image: var(--gradient-started);
     background-color: var(--color-started);
     color: var(--color-started-over);
 }
 
-td.progress-beaten, .reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-beaten .reviewinfo-metadata-icon {
+.reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-beaten .reviewinfo-metadata-icon {
     background-image: var(--gradient-beaten);
     background-color: var(--color-beaten);
     color: var(--color-beaten-over);
 }
 
-td.progress-completed, .reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-completed .reviewinfo-metadata-icon {
+.reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-completed .reviewinfo-metadata-icon {
     background-image: var(--gradient-completed);
     background-color: var(--color-completed);
     color: var(--color-completed-over);
 }
 
-td.progress-mastered, .reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-mastered .reviewinfo-metadata-icon {
+.reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-mastered .reviewinfo-metadata-icon {
     background-image: var(--gradient-mastered);
     background-color: var(--color-mastered);
     color: var(--color-mastered-over);
 }
 
-td.progress-notapplicable, .reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-notapplicable .reviewinfo-metadata-icon {
+.reviewinfo-metadata-content:is(.game-progress, .anime-progress).progress-notapplicable .reviewinfo-metadata-icon {
     background-image: var(--gradient-notapplicable);
     background-color: var(--color-notapplicable);
     color: var(--color-notapplicable-over);
@@ -359,8 +378,6 @@ td.review-rating, td.game-progress, td.anime-progress {
     min-width: 38px;
     min-height: 38px;
     text-align: center;
-
-    border-bottom: 0;
 
     font-family: var(--font-title), serif;
     font-weight: 700;
